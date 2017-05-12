@@ -7,5 +7,6 @@ namespace ShEAT.Models.DTO
 {
     public class SaveResponse
     {
+        public bool isSaveSuccessful { get; set; }
     }
 }
