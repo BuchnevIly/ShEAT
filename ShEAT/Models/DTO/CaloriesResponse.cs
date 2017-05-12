@@ -7,5 +7,10 @@ namespace ShEAT.Models.DTO
 {
     public class CaloriesResponse
     {
+        public string ImageURL { get; set; }
+
+        public string NameImageObject { get; set; }
+
+        public double Caloricity { get; set; }
     }
 }
