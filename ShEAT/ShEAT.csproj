@@ -161,8 +161,6 @@
       <DependentUpon>201705121839143_init1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountLogic.cs" />
-    <Compile Include="Models\CaloriesLogic.cs" />
     <Compile Include="Models\DTO\CaloriesResponse.cs" />
     <Compile Include="Models\DTO\HistoryResponse.cs" />
     <Compile Include="Models\DTO\LoginResponse.cs" />
@@ -172,7 +170,6 @@
     <Compile Include="Models\Entity\CaloriesContext.cs" />
     <Compile Include="Models\Entity\History.cs" />
     <Compile Include="Models\Entity\User.cs" />
-    <Compile Include="Models\StatisticLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
