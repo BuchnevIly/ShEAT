@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShEAT.Models.DTO;
+using ShEAT.Models.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,9 @@ namespace ShEAT.Controllers
 {
     public class ApiController : Controller
     {
+
+        CaloriesContext db = new CaloriesContext();
+
         /// <summary>
         /// Авторизация
         /// </summary>
@@ -16,7 +21,12 @@ namespace ShEAT.Controllers
         /// <returns></returns>
         public JsonResult Login(string email, string password)
         {
-            return null;
+            var user = db.Users.First(x => x.Email == email && x.Password == password);
+            var result = false;
+            if (user != null)
+                result = true;
+
+            return Json(new LoginResponse { isLoginSuccessful = result });
         }
 
 

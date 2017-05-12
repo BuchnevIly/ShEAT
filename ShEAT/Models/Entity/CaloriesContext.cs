@@ -12,7 +12,7 @@ namespace ShEAT.Models.Entity
         public CaloriesContext() : base("DefaultConnection")
         { }
 
-        public DbSet<User> Books { get; set; }
-        public DbSet<History> Purchases { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<History> Histories { get; set; }
     }
 }
