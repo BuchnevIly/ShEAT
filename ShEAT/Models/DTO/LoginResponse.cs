@@ -7,5 +7,6 @@ namespace ShEAT.Models.DTO
 {
     public class LoginResponse
     {
+        public bool isLoginSuccessful { get; set; }
     }
 }
