@@ -7,5 +7,6 @@ namespace ShEAT.Models.DTO
 {
     public class RegistrationResponse
     {
+        public bool success { get; set; }
     }
 }

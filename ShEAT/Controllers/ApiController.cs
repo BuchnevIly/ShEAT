@@ -38,9 +38,26 @@ namespace ShEAT.Controllers
         /// <returns></returns>
         public JsonResult Registration(string email, string password)
         {
-            return null;
+            if (db.Users.Where(x => x.Email == email).Any())
+            {
+                return Json(new RegistrationResponse
+                {
+                    success = false
+                });
+            }
+            else
+            {
+                db.Users.Add(new User
+                {
+                    Email = email,
+                    Password = password
+                });
+                return Json(new RegistrationResponse
+                {
+                    success = true
+                });
+            }
         }
-        //test commit
 
         /// <summary>
         ///  Статистика
