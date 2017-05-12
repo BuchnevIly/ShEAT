@@ -8,6 +8,10 @@ namespace ShEAT.Models.Entity
 {
     public class CaloriesContext : DbContext
     {
+
+        public CaloriesContext() : base("DefaultConnection")
+        { }
+
         public DbSet<User> Books { get; set; }
         public DbSet<History> Purchases { get; set; }
     }
