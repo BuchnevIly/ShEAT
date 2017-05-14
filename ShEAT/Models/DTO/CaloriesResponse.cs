@@ -7,6 +7,8 @@ namespace ShEAT.Models.DTO
 {
     public class CaloriesResponse
     {
+        public int ID { get; set; }
+
         public string ImageURL { get; set; }
 
         public string NameImageObject { get; set; }

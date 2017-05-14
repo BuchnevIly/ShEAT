@@ -160,8 +160,15 @@
     <Compile Include="Migrations\201705121839143_init1.Designer.cs">
       <DependentUpon>201705121839143_init1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705131809448_addLog.cs" />
+    <Compile Include="Migrations\201705131809448_addLog.Designer.cs">
+      <DependentUpon>201705131809448_addLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountLogic.cs" />
+    <Compile Include="Models\CaloriesLogic.cs" />
     <Compile Include="Models\DTO\CaloriesResponse.cs" />
+    <Compile Include="Models\DTO\GetCaloriesResponse.cs" />
     <Compile Include="Models\DTO\HistoryResponse.cs" />
     <Compile Include="Models\DTO\LoginResponse.cs" />
     <Compile Include="Models\DTO\RegistrationResponse.cs" />
@@ -169,7 +176,10 @@
     <Compile Include="Models\DTO\StatisticResponse.cs" />
     <Compile Include="Models\Entity\CaloriesContext.cs" />
     <Compile Include="Models\Entity\History.cs" />
+    <Compile Include="Models\Entity\Log.cs" />
     <Compile Include="Models\Entity\User.cs" />
+    <Compile Include="Models\LogManager.cs" />
+    <Compile Include="Models\StatisticLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +194,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -212,6 +223,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UploadedFiles\" />
     <Folder Include="Views\Api\" />
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705121839143_init1.resx">
       <DependentUpon>201705121839143_init1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705131809448_addLog.resx">
+      <DependentUpon>201705131809448_addLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
